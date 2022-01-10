@@ -6,12 +6,7 @@ class Solution {
         m = grid.length;
         n = grid[0].length;
         boolean isvisited[][] = new boolean[m][n];
-        //Arrays.fill(isvisited, false);
-        for(int a = 0; a < isvisited.length; a++){
-            for(int b = 0; b < isvisited[a].length; b++){
-                isvisited[a][b] = false;
-            }
-        }
+
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
