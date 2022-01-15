@@ -1,8 +1,6 @@
 func minimumTotal(triangle [][]int) int {
-    n:=len(triangle)
-    //levelminimum:=make([]int,level)
     
-    //levelminimum[0] = triangle[0][0]
+    n:=len(triangle)
 
     for i :=n-2;i>=0;i--{
         for j:=i;j>=0;j--{
