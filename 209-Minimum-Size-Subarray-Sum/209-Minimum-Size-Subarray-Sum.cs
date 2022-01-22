@@ -1,32 +1,23 @@
 public class Solution {
-    public int MinSubArrayLen(int target, int[] nums) {
-        int p;
-        int l;
-        int r;
-        int minlen;
-        int sum;
+    public int MinSubArrayLen(int target,int[]nums) {
         
-		
-        p =nums.Length;
- 
-        l=0; r=0; minlen = 100000; sum = nums[0];
+        int n = nums.Length; 
+        int l=0, r=0, minlen = 100000, sum = 0;
         
-        while(l <= r)
-        {
-            if(sum >= target)
+        while(r < n)
+        { 
+            sum += nums[r];
+            r++;
+            while(sum >= target)
             {
-                int len = r-l + 1;
+                int len = r-l;
                 if (len < minlen )  minlen = len;
+                sum -= nums[l];
+                l++; 
             }
             
-            if (r < p){
-                r++;
-                sum += nums[r];
-            }else{
-                sum -= nums[l];
-                l++;             
-            }
         }
-        return minlen;
+        if (minlen != 100000) return minlen;
+        else return 0;
     }
 }
