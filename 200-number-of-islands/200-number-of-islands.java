@@ -39,7 +39,6 @@ class Solution {
         DFS(grid,i+1,j,isvisited);
         DFS(grid,i-1,j,isvisited);
         DFS(grid,i,j+1,isvisited);
-        DFS(grid,i,j-1,isvisited);
-        
+        DFS(grid,i,j-1,isvisited);  
     }
 }
