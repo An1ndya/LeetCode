@@ -37,6 +37,7 @@ class Solution {
         while(!q.isEmpty())
         {
             size = q.size();
+            
             for(int i=0;i<size;i++)
             {
                 Node current = q.peek();
