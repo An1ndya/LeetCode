@@ -8,9 +8,8 @@ public:
         combinationsum(candidates,combo,n,target,0);
         return result;
     }
-    void combinationsum(vector<int>& candidates,vector<int> combo,int n, int target,int index)
+    void combinationsum(vector<int>& candidates,vector<int>& combo,int& n, int target,int index)
     {
-        //cout<<target<< " "<< index<<endl;
         if(target < 0)
         {
             return;
