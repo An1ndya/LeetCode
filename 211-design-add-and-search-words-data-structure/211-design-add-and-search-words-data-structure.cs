@@ -7,10 +7,13 @@ public class WordDictionary {
     }
     
     public void AddWord(string word) {
-        node element = new node();
-        element.s=word;
-        element.next=head;
-        head=element;
+        if(!Search(word))
+        {
+            node element = new node();
+            element.s=word;
+            element.next=head;
+            head=element;
+        }
     }
     
     public bool Search(string word) {
