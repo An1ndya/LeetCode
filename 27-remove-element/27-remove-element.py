@@ -7,8 +7,7 @@ class Solution:
             if nums[i]==val:
                 p+=1
             else:
-                if p>0 : nums[i-p]=nums[i]
-                c=0    
+                if p>0 : nums[i-p]=nums[i]   
             i+=1
             
         return n-p
