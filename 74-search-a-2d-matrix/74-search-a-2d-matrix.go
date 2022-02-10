@@ -6,13 +6,13 @@ func searchMatrix(matrix [][]int, target int) bool {
     l:=0 
     r:=m-1
     row:=0
+    middle:=0
     for l <= r {
-        middle:= int((l+r)/2)
+        middle = int((l+r)/2)
         
         if matrix[middle][0] == target{
             return true
-        }
-        
+        } 
         if target < matrix[middle][0]{
             r = middle - 1 
         }else{
@@ -20,7 +20,6 @@ func searchMatrix(matrix [][]int, target int) bool {
         }
         row = middle
     }  
-    //fmt.Println(row)
     
     if matrix[row][0] > target && row != 0 {row--}
     
@@ -29,12 +28,11 @@ func searchMatrix(matrix [][]int, target int) bool {
     r=n-1
     
     for l <= r {
-        middle:= int((l+r)/2)
+        middle = int((l+r)/2)
         
         if matrix[row][middle] == target{
             return true
         }
-        
         if target < matrix[row][middle]{
             r = middle - 1 
         }else{
