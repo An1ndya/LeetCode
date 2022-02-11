@@ -17,9 +17,6 @@ func rob(nums []int) int {
     return ara[n-1]
 }
 func max(a int, b int ) int{
-    if a > b{
-        return a
-    }else{
-        return b
-    }
+    if a > b{   return a
+    }else   {   return b}
 }
