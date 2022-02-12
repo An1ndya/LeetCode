@@ -15,9 +15,8 @@ class Solution:
                     prev.next=temp.next
                 if head==temp:
                     head=temp.next
-                #prev should remain same, as we dont know about next value 
-            else:
-                
+                    #prev should remain same, as we dont know about next value 
+            else:          
                 prev=temp
             temp=temp.next
                 
