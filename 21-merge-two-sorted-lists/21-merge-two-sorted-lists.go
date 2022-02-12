@@ -12,7 +12,6 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode{
     var mergedhead *ListNode = nil
     var merged *ListNode
     var cur *ListNode
-    var count int = 0
     for temp1!= nil || temp2!= nil {
         if temp1!= nil && temp2!= nil {
             if temp1.Val < temp2.Val{
@@ -30,14 +29,13 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode{
             cur = &ListNode{temp2.Val,nil}
             temp2 = temp2.Next
         }
-        if count == 0 { 
+        if mergedhead == nil { 
             mergedhead = cur
             merged = mergedhead
         }else{
             merged.Next = cur
             merged = merged.Next 
         }
-        count++
     }
 
     return mergedhead
