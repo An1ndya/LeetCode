@@ -4,7 +4,7 @@ public:
     {
         int ara[n+2];
         ara[1] = 1;        //1 step
-        ara[2] = 2;         //1+1,2 : 2 combination 
+        ara[2] = 2;        //1+1,2 : 2 combination 
         for(int i=3;i<=n;i++)
         {
             //come to point i by climbing 1 step from i-1
