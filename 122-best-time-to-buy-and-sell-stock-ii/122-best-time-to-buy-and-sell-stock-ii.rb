@@ -8,12 +8,9 @@ def max_profit(prices)
     for i in 0..n-1
         if minval > prices[i]
             minval= prices[i]
-        else
-            if prices[i]-minval > maxprofit; maxprofit = prices[i]-minval end
-        end
-        if i+1<n and prices[i+1]> prices[i];
-            dailyprofit += prices[i+1]-prices[i]
-            if dailyprofit > maxprofit; maxprofit = dailyprofit end
+        elsif prices[i]> minval
+            maxprofit += prices[i]-minval 
+            minval= prices[i]
         end
     end
     return maxprofit  
