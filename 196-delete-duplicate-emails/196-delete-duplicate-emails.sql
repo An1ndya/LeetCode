@@ -1,5 +1,4 @@
+# Please write a DELETE statement and DO NOT write a SELECT statement.
 # Write your MySQL query statement below
-
-DELETE P1 FROM Person P1
-INNER JOIN Person P2 
-WHERE P1.id > P2.id AND P1.email = P2.email;
+DELETE p1 FROM Person  p1 , Person  p2
+WHERE  p1.id > p2.id AND p1.email = p2.email;
