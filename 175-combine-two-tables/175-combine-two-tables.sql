@@ -1,7 +1,3 @@
-# Write your MySQL query statement below
-
-select p.firstname, p.lastname, a.city ,a.state 
-
-from person p left join address a 
-
-on p.personId = a.personId
+/* Write your T-SQL query statement below */
+SELECT P.firstName , P.lastName  , A.city  , A.state 
+FROM Person P LEFT JOIN Address A on P.personId   = A.personId    
