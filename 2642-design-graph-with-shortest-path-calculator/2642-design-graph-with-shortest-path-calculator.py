@@ -24,7 +24,8 @@ class Graph:
         while pq:
 
             d, u = heapq.heappop(pq)
-            
+            #we always push min dis first so first node2 will have min distance 
+            if u==node2: return d
             for v in self.adjList[u]:
                 # If there is shorted path to v through u.
                 weight = self.edgecosthash[str(u)+"->"+str(v)]
@@ -32,8 +33,7 @@ class Graph:
                     # Updating distance of v
                     dist[v] = dist[u] + weight
                     heapq.heappush(pq, (dist[v],v))
-        if dist[node2] == 1000000000: return -1
-        return dist[node2]
+        return -1
 
 
 # Your Graph object will be instantiated and called as such:
