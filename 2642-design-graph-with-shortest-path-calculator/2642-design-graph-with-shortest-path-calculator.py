@@ -24,6 +24,8 @@ class Graph:
         while pq:
 
             d, u = heapq.heappop(pq)
+            #no point to push this path as then never create min distance for dist[v]
+            if d > dist[u]: continue
             #we always push min dis first so first node2 will have min distance 
             if u==node2: return d
             for v in self.adjList[u]:
