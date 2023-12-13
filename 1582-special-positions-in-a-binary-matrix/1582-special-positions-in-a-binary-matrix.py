@@ -8,8 +8,8 @@ class Solution:
             for j in range(n):
                 rowtotal[i]+=mat[i][j]
                 coltotal[j]+=mat[i][j]
-        print(rowtotal)
-        print(coltotal)
+        #print(rowtotal)
+        #print(coltotal)
         ans=0
         for i in range(m):
             for j in range(n):
