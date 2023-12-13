@@ -13,6 +13,10 @@ class Solution:
         ans=0
         for i in range(m):
             for j in range(n):
-                if rowtotal[i]==1 and coltotal[j]==1 and mat[i][j]==1:
-                    ans+=1
+                if rowtotal[i]==1 :
+                    if coltotal[j]==1 and mat[i][j]==1:
+                        ans+=1
+                else:
+                    break
+                    
         return ans
