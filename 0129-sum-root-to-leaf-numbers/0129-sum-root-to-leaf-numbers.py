@@ -12,9 +12,11 @@ class Solution:
             if node == None : 
                 return
             elif node.left == None and node.right == None :
+                #leaf node, so add to total sum
+                #The previous sum * 10 as node value adding after last digit
                 ans+= sum*10+node.val
                 return
-            
+            #during traverse keep track of sum
             DFS(node.left, node.val+sum*10)
             DFS(node.right, node.val+sum*10)
             
